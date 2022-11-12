@@ -10,8 +10,8 @@ router.get('/users/:id', UserController.getUserById);
 
 router.post('/register', UserController.createUser);
 
-router.put('/users/:id', UserController.updateUser);
+router.put('/update/:id', UserController.updateUser);
 
-router.delete('/users/:id', UserController.deleteUser);
+router.delete('/delete/:id', UserController.deleteUser);
 
 export default router;
