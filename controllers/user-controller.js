@@ -36,9 +36,11 @@ class UserController {
             });
             const data = await newUser.save();
             res.status(201).json({ message: "ID added successfully", data });
+            
 
         } catch (err) {
             res.status(409).json({ message: err.message });
+            res.send(err);
 
         }
     }
