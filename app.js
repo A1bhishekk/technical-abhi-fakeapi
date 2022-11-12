@@ -7,7 +7,7 @@ import {join} from 'path';
 const app = express();
 
 dotenv.config();
-const PORT = 5000 || process.env.PORT;
+const PORT =process.env.PORT  || 5000;
 const username=process.env.DB_USERNAME;
 const password=process.env.DB_PASSWORD;
 
