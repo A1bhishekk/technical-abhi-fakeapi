@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import autoIncrement from "mongoose-auto-increment";
+// import autoIncrement from "mongoose-auto-increment";
 
 const userSchema = new mongoose.Schema({
     user_id: Number,
@@ -28,12 +28,12 @@ const userSchema = new mongoose.Schema({
         default:Date.now
     },
 });
-autoIncrement.initialize(mongoose.connection);
-userSchema.plugin(autoIncrement.plugin, {
-    model: "user",
-    field: "user_id",
-    startAt: 101,
-    incrementBy: 1,
-});
+// autoIncrement.initialize(mongoose.connection);
+// userSchema.plugin(autoIncrement.plugin, {
+//     model: "user",
+//     field: "user_id",
+//     startAt: 101,
+//     incrementBy: 1,
+// });
 const user=mongoose.model("user", userSchema);
 export default user;
